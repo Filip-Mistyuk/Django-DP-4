@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review List</title>
+</head>
+<body>
+    <h1>Review List</h1>
+    <ul>
+        {% for review in reviews %}
+            <li>
+                <h2>{{ review.title }}</h2>
+                <p>{{ review.content }}</p>
+                <p>Author: {{ review.author.username }}</p>
+                <p>Date: {{ review.pub_date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
